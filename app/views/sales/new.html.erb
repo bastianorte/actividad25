@@ -1,0 +1,25 @@
+<h1>Sales#new</h1>
+<%= form_with model: @sale, local: true do |f| %>
+
+<%=f.label :cod, 'Codigo'%>
+<%= f.number_field :cod, id: :cod %>
+
+<%=f.label :detail, 'Detalle'%>
+<%= f.text_area :detail, id: :detail %>
+
+<%=f.label :category, 'Categoria'%>
+<%= f.text_field :category, id: :category %>
+
+<%=f.label :value, 'Valor'%>
+<%= f.number_field :value, id: :value %>
+
+<%=f.label :discount, 'Descuento'%>
+<%= f.number_field :discount, id: :discount %>
+
+<%=f.label :tax, 'Impuesto'%>
+<%= f.check_box :tax, id: :tax %>
+
+
+<%= f.submit "Crear" %>
+
+<% end %>
